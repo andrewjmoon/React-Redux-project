@@ -47,7 +47,7 @@ const Question = props => {
       <Card className={classes.card} onClick={e => loadDetails(e, poll.id)}>
         <CardContent>
           <Typography className={classes.title} color="textSecondary">
-            <b>Would You Rather</b>
+            <b>Would You Rather/Prefer</b>
           </Typography>
           <List component="nav">
             <ListItem button>

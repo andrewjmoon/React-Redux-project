@@ -56,7 +56,6 @@ const DashBoard = props => {
     .filter(qid => !answeredPolls.includes(qid))
     .sort((a, b) => polls[b].timestamp - polls[a].timestamp);
 
-  //const { answeredPolls, unansweredPolls } = props;
   const classes = useStyles();
 
   return (

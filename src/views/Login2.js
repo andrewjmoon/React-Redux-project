@@ -64,7 +64,7 @@ const Login2 = props => {
     <div style={{ textAlign: 'center', marginTop: '50px' }}>
       <Typography color="primary" variant="h6" style={{ marginBottom: '60px' }}>
         {' '}
-        Welcome to the Would You Prefer Game.
+        Welcome to the Would You Rather/Prefer Game.
       </Typography>
       <form>
         <FormControl>
