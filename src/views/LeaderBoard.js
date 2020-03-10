@@ -8,6 +8,7 @@ import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
+import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -15,7 +16,10 @@ const useStyles = makeStyles(theme => ({
     marginTop: '180px',
     overflowX: 'auto',
     marginLeft: '300px',
-    backgroundColor: 'lightblue'
+    backgroundColor: 'lightblue',
+    justifyContent: 'center',
+    alignItems: 'center',
+    textAlign: 'center'
   },
   table: {
     width: '120%',
@@ -45,7 +49,15 @@ export default () => {
   const classes = useStyles();
 
   return (
-    <div data-testid="leaderboard-view">
+    <div
+      data-testid="leaderboard-view"
+      style={{ textAlign: 'center', marginTop: '50px' }}
+    >
+      <Typography color="primary" variant="h3" style={{ marginBottom: '60px' }}>
+        {' '}
+        The Leaderboard Page
+      </Typography>
+
       <Paper className={classes.root}>
         <Table className={classes.table}>
           <TableHead>
