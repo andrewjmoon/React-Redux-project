@@ -6,6 +6,10 @@ The `_DATA.js` file represents a fake database and methods that let you access t
 
 Using the provided starter code, you'll build a React/Redux front end for the application. We recommend using the [Create React App](https://github.com/facebook/create-react-app) to bootstrap the project.
 
+## Instructions
+
+The user should create a new folder in the directory. Then the user cd(commands) into that folder presses the clone or download button. Clicking the first option (Clone with HTTPS), the user must press the copy icon. Then return back into the folder in the command prompt and type git clone and paste the github address. Once the files are downloaded, the user cds into the new folder. To install the code, the user can either use npm or yarn. With yarn, the user types yarn and the dependcies are downloaded. If using npm, then the user should type npm install for the dependency download. To start the code with yarn, the user just types yarn start. To start the code with npm, the user just types npm start. The finished project should appear on the screen.
+
 ## Data
 
 There are two types of objects stored in our database:

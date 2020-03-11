@@ -1,8 +1,12 @@
 import React from 'react';
 
 const NoMatch = () => (
-  <div>
-    <h3>No match found </h3>
+  <div className="App">
+    <h3>
+      No match found. Please type in the correct page.
+      <br />
+      Thanks{' '}
+    </h3>
   </div>
 );
 

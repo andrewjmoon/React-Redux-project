@@ -34,7 +34,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const Login2 = props => {
+const Login = props => {
   const [userId, setUserId] = useState('');
   const [redirectToReferrer, setredirectToReferrer] = useState(false);
   const { users } = useSelector(({ users, authedUser }) => ({
@@ -53,7 +53,7 @@ const Login2 = props => {
   };
 
   const { from } = props.location.state || {
-    from: { pathname: '/dashboard' }
+    from: { pathname: '/' }
   };
 
   if (redirectToReferrer) {
@@ -64,7 +64,10 @@ const Login2 = props => {
     <div style={{ textAlign: 'center', marginTop: '50px' }}>
       <Typography color="primary" variant="h6" style={{ marginBottom: '60px' }}>
         {' '}
-        Welcome to the Would You Rather/Prefer Game.
+        Welcome to the Would You Rather Game.
+        <br />
+        <br />
+        Please Login Below.
       </Typography>
       <form>
         <FormControl>
@@ -102,4 +105,4 @@ const Login2 = props => {
   );
 };
 
-export default connect()(Login2);
+export default connect()(Login);

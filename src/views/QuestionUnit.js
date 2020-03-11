@@ -91,7 +91,6 @@ const QuestionUnit = props => {
     return <Redirect to="/404" />;
   }
 
-  //const { selectedOption } = this.state;
   const optionOneSelected = isOneAnswered
     ? { color: 'blue' }
     : { color: 'red' };
@@ -103,6 +102,7 @@ const QuestionUnit = props => {
     <div>
       <Card className={classes.card}>
         <CardContent>
+          Would You Rather
           <Avatar
             alt="image of the user"
             src={authorURL}

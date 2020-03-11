@@ -23,7 +23,7 @@ const useStyles = makeStyles(theme => ({
     width: '80%',
     height: '200px',
     margin: '0 auto',
-    marginTop: '200px',
+    marginTop: '150px',
     textAlign: 'center',
     backgroundColor: 'lightblue'
   },
@@ -62,7 +62,12 @@ const NewQuestion = (props, { history }) => {
   const classes = useStyles();
 
   return (
-    <div>
+    <div className="App">
+      <h1 style={{ paddingTop: '30px' }}>Would You Rather</h1>
+      <h3>
+        Please enter a question in each of the two options and then press the
+        add question below.
+      </h3>
       <Card className={classes.card}>
         <CardContent>
           <Typography className={classes.title} color="textSecondary">

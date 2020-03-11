@@ -11,7 +11,7 @@ const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
     height: '100px',
-    width: '65%',
+    width: '55%',
     paddingLeft: '400px',
     marginTop: '20px'
   }
@@ -69,6 +69,7 @@ const DashBoard = props => {
         marginTop: '20px'
       }}
     >
+      <h1 style={{ paddingTop: '30px' }}> Dashboard</h1>
       <TabBox>
         <AppBar position="static">
           <Tabs

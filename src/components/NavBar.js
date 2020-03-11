@@ -113,7 +113,7 @@ class NavBar extends Component {
             <Typography className={classes.title2} variant="h3" align="center">
               <Link className={classes.title2} to="/">
                 {' '}
-                <b> Would You Rather/Prefer</b>
+                <b> Would You Rather</b>
               </Link>
             </Typography>
             <Typography className={classes.title3} variant="h6" align="center">

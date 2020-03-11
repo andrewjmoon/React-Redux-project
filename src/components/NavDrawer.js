@@ -25,9 +25,18 @@ class NavDrawer extends React.Component {
             <Divider />
             <br />
             <li>
-              <Link className="Link" to="/">
+              <Link className="Link" to="/login">
                 {' '}
                 Login Page{' '}
+              </Link>
+            </li>
+            <Divider />
+
+            <br />
+            <li>
+              <Link className="Link" to="/">
+                {' '}
+                Dashboard{' '}
               </Link>
             </li>
             <Divider />
