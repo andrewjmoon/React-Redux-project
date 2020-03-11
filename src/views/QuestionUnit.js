@@ -30,14 +30,12 @@ const useStyles = makeStyles(theme => ({
   },
   avatar: {
     margin: 10,
-    justifyContent: 'center',
-    
+    justifyContent: 'center'
   },
-  bigAvatar: {
+  avatar2: {
     width: 80,
     height: 80,
-    justifyContent: 'center',
-    
+    justifyContent: 'center'
   }
 }));
 
@@ -108,7 +106,7 @@ const QuestionUnit = props => {
           <Avatar
             alt="image of the user"
             src={authorURL}
-            className={(classes.avatar, classes.bigAvatar)}
+            className={(classes.avatar, classes.avatar2)}
           />
           <span style={{ marginBottom: '20px' }}>
             {' '}

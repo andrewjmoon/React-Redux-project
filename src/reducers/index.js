@@ -5,8 +5,8 @@ import polls from './Questions';
 import { loadingBarReducer } from 'react-redux-loading';
 
 export default combineReducers({
+  loadingBar: loadingBarReducer,
   authedUser: authedUser,
   users: users,
-  polls: polls,
-  loadingBar: loadingBarReducer
+  polls: polls
 });
