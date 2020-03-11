@@ -81,8 +81,8 @@ const DashBoard = props => {
             value={value}
             onChange={handleChange}
           >
-            <Tab label="Unaswered Question" />
-            <Tab label="Answered Question" />
+            <Tab label="Unaswered Polls" />
+            <Tab label="Answered Polls" />
           </Tabs>
         </AppBar>
 

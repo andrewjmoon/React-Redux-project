@@ -74,27 +74,3 @@ function mapStateToProps({ authedUser, loggedOut }) {
 }
 
 export default connect(mapStateToProps)(App);
-
-/*
-  function PrivateRoute({ component: Component, ...rest }) {
-    const { authUser } = rest;
-
-    return (
-      <Route
-        {...rest}
-        render={props =>
-          authUser !== null ? (
-            <Component {...props} />
-          ) : (
-            <Redirect
-              to={{
-                pathname: '/login',
-                state: { from: props.location.pathname }
-              }}
-            />
-          )
-        }
-      />
-    );
-  }
-*/

@@ -61,10 +61,8 @@ const QuestionUnit = props => {
   const { id } = props.match.params;
   const poll = polls[id];
 
-  if (typeof poll === 'undefined') {
-    return {
-      notFound: true
-    };
+  if (!poll) {
+    return <Redirect to="/404" />;
   }
 
   const pollAuthor = users[poll.author];
@@ -85,11 +83,6 @@ const QuestionUnit = props => {
     (percTwoLength / (percOneLength + percTwoLength)) *
     100
   ).toFixed(2);
-
-  console.log(props);
-  if (!poll) {
-    return <Redirect to="/404" />;
-  }
 
   const optionOneSelected = isOneAnswered
     ? { color: 'blue' }

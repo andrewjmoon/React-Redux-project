@@ -6,30 +6,43 @@ import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
-import Paper from '@material-ui/core/Paper';
 import Table from '@material-ui/core/Table';
+import Card from '@material-ui/core/Card';
 
 const useStyles = makeStyles(theme => ({
   root: {
-    width: '50%',
-    marginTop: '180px',
+    width: '55%',
+    marginTop: '150px',
     overflowX: 'auto',
-    marginLeft: '300px',
+    marginLeft: '360px'
+  },
+  table: {
+    width: '100%',
     backgroundColor: 'lightblue',
     justifyContent: 'center',
     alignItems: 'center',
     textAlign: 'center'
   },
-  table: {
-    width: '120%',
-    backgroundColor: 'lightblue'
+  table2: {
+    display: 'flex',
+    justifyContent: 'center',
+    marginTop: 50
+  },
+  table3: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    textAlign: 'center',
+    marginTop: 50
   },
   avatar: {
-    margin: 10,
-    paddingLeft: 10,
-    display: 'block',
-    width: 50,
-    height: 50
+    marginBottom: 1,
+    marginLeft: 80,
+    display: 'inline-block',
+    width: 80,
+    height: 50,
+    justifyContent: 'center',
+    alignItems: 'center',
+    textAlign: 'center'
   }
 }));
 
@@ -48,42 +61,56 @@ export default () => {
   const classes = useStyles();
 
   return (
-    <div
-      data-testid="leaderboard-view"
-      style={{ textAlign: 'center', marginTop: '50px' }}
-    >
+    <div style={{ textAlign: 'center', marginTop: '50px' }}>
       <h1 style={{ marginBottom: '60px' }}>The Leaderboard Page</h1>
-      <Paper className={classes.root}>
+      <Card className={classes.root}>
         <Table className={classes.table}>
           <TableHead>
             <TableRow>
-              <TableCell>Rank</TableCell>
-              <TableCell>User</TableCell>
-              <TableCell>Question Asked</TableCell>
-              <TableCell>Question Answered</TableCell>
+              <TableCell>
+                <h2>Rank</h2>
+              </TableCell>
+              <TableCell>
+                <h2>User</h2>
+              </TableCell>
+              <TableCell>
+                <h2>Questions Asked</h2>
+              </TableCell>
+              <TableCell>
+                <h2>Questions Answered</h2>
+              </TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
             {board.map((user, index) => {
               return (
                 <TableRow key={user.id}>
-                  <TableCell>{index + 1} </TableCell>
-                  <TableCell>{user.id}</TableCell>
                   <TableCell>
-                    <span> {user.created} </span>
+                    <h2>{index + 1}</h2>{' '}
+                  </TableCell>
+                  <TableCell>
+                    <h2>{user.id}</h2>
+                  </TableCell>
+                  <TableCell>
+                    <span className={classes.table2}>
+                      {' '}
+                      <h2>{user.created}</h2>{' '}
+                    </span>
                     <Avatar
                       alt={user.id}
                       src={user.imageURL}
                       className={classes.avatar}
                     />
                   </TableCell>
-                  <TableCell>{user.answered}</TableCell>
+                  <TableCell className={classes.table3}>
+                    <h2>{user.answered}</h2>
+                  </TableCell>
                 </TableRow>
               );
             })}
           </TableBody>
         </Table>
-      </Paper>
+      </Card>
     </div>
   );
 };

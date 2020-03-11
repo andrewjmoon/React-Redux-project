@@ -11,7 +11,10 @@ import Button from '@material-ui/core/Button';
 const useStyles = makeStyles(theme => ({
   container: {
     display: 'flex',
-    flexWrap: 'wrap'
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+    alignItems: 'center',
+    textAlign: 'center'
   },
 
   textField: {
@@ -30,11 +33,6 @@ const useStyles = makeStyles(theme => ({
   title: {
     marginBottom: 16,
     fontSize: 14
-  },
-  title2: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    textAlign: 'center'
   }
 }));
 
@@ -66,7 +64,7 @@ const NewQuestion = (props, { history }) => {
       <h1 style={{ paddingTop: '30px' }}>Would You Rather</h1>
       <h3>
         Please enter a question in each of the two options and then press the
-        add question below.
+        add question button below.
       </h3>
       <Card className={classes.card}>
         <CardContent>
@@ -96,11 +94,12 @@ const NewQuestion = (props, { history }) => {
               margin="normal"
             />
             <Button
-              color="primary"
+              color="secondary"
               disabled={optionOne === '' || optionTwo === ''}
               type="submit"
+              variant="outlined"
             >
-              <p className={classes.title2}>ADD QUESTION</p>
+              <p>ADD QUESTION</p>
             </Button>
           </form>
         </CardContent>

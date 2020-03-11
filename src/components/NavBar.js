@@ -17,7 +17,7 @@ const styles = themes => ({
     marginLeft: -12,
     marginRight: 20
   },
-  menuButtonF: {
+  menuButton2: {
     marginRight: 0
   },
   icon: {
@@ -140,7 +140,7 @@ class NavBar extends Component {
                   Hello,{authedUser}
                 </Typography>
                 <Typography className={classes.title} color="inherit">
-                  <Link className="Link" to="/dashboard">
+                  <Link className="Link" to="/">
                     Dashboard
                   </Link>
                 </Typography>
@@ -159,10 +159,10 @@ class NavBar extends Component {
 
                 <Button
                   color="inherit"
-                  className={classes.menuButtonF}
+                  className={classes.menuButton2}
                   onClick={this.handleLogOut}
                 >
-                  <Link className="Link" to="/">
+                  <Link className="Link" to="/login">
                     {' '}
                     Logout{' '}
                   </Link>
