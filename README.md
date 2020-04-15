@@ -1,4 +1,4 @@
-# Would You Rather Project
+# Would You Prefer Project
 
 This project uses React, Redux, and Material-UI to create a Would You Rather game. There are also resources provided for potential questions for the game. This project also utilizes Redux hooks useSelector and useDispatch in some of the view components.
 
